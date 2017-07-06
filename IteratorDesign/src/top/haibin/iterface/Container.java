@@ -5,7 +5,7 @@ package top.haibin.iterface;
  */
 public interface Container<T> {
 
-    ContainerIterator iterator();
+    ContainerIterator<T> iterator();
 
     void add(T element);
 }

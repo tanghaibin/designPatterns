@@ -5,7 +5,7 @@ import top.haibin.iterface.ContainerIterator;
 /**
  * Created by haibin.tang on 2017/7/6 0006.
  */
-public class ContainerIteratorImpl implements ContainerIterator {
+public class ContainerIteratorImpl<T> implements ContainerIterator<T> {
 
     private int index = 0;
 
@@ -19,8 +19,8 @@ public class ContainerIteratorImpl implements ContainerIterator {
     }
 
     @Override
-    public Object next() {
-        return elements[index++];
+    public T next() {
+        return (T)elements[index++];
     }
 
     @Override
@@ -34,10 +34,10 @@ public class ContainerIteratorImpl implements ContainerIterator {
     }
 
     @Override
-    public Object prev() {
+    public T prev() {
         if(index < 1) {
             throw new ArrayIndexOutOfBoundsException();
         }
-        return elements[--index];
+        return (T) elements[--index];
     }
 }

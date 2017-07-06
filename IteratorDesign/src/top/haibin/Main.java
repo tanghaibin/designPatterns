@@ -17,7 +17,7 @@ public class Main {
         userList.add(new User("小刚", 12));
         userList.add(new User("小离", 24));
 
-        ContainerIterator iterator = userList.iterator();
+        ContainerIterator<User> iterator = userList.iterator();
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
